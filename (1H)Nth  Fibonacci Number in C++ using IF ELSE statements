@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int fib(int n) {
+    int a = 0, b = 1, c, i;
+    if (n == 0)
+        return a;
+    for (i = 2; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
+}
+int main() {
+    int n;
+    std::cout << "Enter the position (n) of the Fibonacci number: ";
+    std::cin >> n;
+    if (n < 0) {
+        std::cout << "Invalid input! Please enter a non-negative integer." << std::endl;
+    } else {
+        int result = fib(n);
+        std::cout << "The " << n << "th Fibonacci number is: " << result << std::endl;
+    }
+    return 0;
+}
