@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    int n, sum = 0, number, i = 0;
+    std::cout << "Enter the value of n: ";
+    std::cin >> n;
+    std::cout << "Enter the numbers: ";
+    do {
+        std::cin >> number;
+        sum += number;   
+        i++;
+    } while (i < n);
+    std::cout << "The sum of the entered numbers is: " << sum << std::endl;
+    return 0;
+}
