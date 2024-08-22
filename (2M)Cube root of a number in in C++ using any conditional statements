@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+int main() {
+    double number, cubeRoot;
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+    if (number < 0) {
+        cubeRoot = -pow(-number, 1.0/3.0);
+    } else {
+        cubeRoot = pow(number, 1.0/3.0);
+    }
+    std::cout << "Cube root of " << number << " is " << cubeRoot << std::endl;
+    return 0;
+}
